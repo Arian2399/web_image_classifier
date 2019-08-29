@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- Add an image that we will use to test -->
+    <div class="page">
+
+
+      <title>Make your own Image Classifier</title>
+      <h1>Make your own Image Classifier</h1>
+
+      <h2> <div class="wc">Your Webcam</div></h2>
+
+      <video autoplay playsinline muted id="webcam" width="480" height="360"></video>
+      <h2>Buttons to add your own objects</h2>
+      <button id="class-a">Add A</button>
+      <button id="class-b">Add B</button>
+      <button id="class-c">Add C</button>
+
+      <h2> <div class="Prediction">Prediction Result</h2> </div>
+
+      <script src="index.js"></script>
+      <div id="console"></div>
+      <div class="list">
+
+
+      <h2><div class="ic">
+
+      How to use the Image Classifier</div></h2>
+
+      <ol>
+        <li>Allow the browser to use your webcam.</li>
+        <li>Whenever you press a button, the Image Classifier will detect the image<br>
+          in the webcam and classify it according to the button you pressed.
+        </li>
+        <li>As the webcam detect images, it will tell you what kind of object it has predicted.</li>
+        <li>If you want to reset the Image Classifier just reload the page.</li>
+        <li>Enjoy!</li>
+      </ol>
+      </div>
+    </div>
+  </body>
+</html>

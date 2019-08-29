@@ -1,0 +1,57 @@
+
+*{
+  margin:0;
+  border: 0;
+  box-sizing: border-box;
+}
+button{
+  border-radius: 8px;
+  font-size: 24px;
+  margin: 8px;
+}
+video{
+  margin-top: 12px;
+}
+button {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+button:hover {
+  background-color: darkblue;
+  color: white;
+}
+body{
+  background-image: url("bg.jpg");
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.Prediction{
+  margin-top: 20px;
+}
+.wc{
+  margin-top: 15px;
+}
+
+ol{
+  text-align: justify;
+  width: 695px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.list, .page, .console, .list, .ic{
+  color: white;
+  text-align: center;
+}
+
+.ic{
+  margin-top: 10px;
+}
+.list{
+  margin-top: 30px;
+  text-align: justify;
+
+}
+li{
+  margin-bottom: 10px;
+}
