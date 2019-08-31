@@ -2,7 +2,17 @@ let net;
 const webcamElement =  document.getElementById('webcam')
 const classifier = knnClassifier.create();
 async function app() {
+  
 
+  document.getElementById('counta').innerText = `
+    Images of type A: 0
+  `;
+  document.getElementById('countb').innerText = `
+    Images of type B: 0
+  `;
+  document.getElementById('countc').innerText = `
+    Images of type C: 0
+  `;
   console.log('Loading mobilenet..');
 
   // Load the model.
@@ -42,13 +52,31 @@ async function app() {
       // Get the most likely class and confidences from the classifier module.
       const result = await classifier.predictClass(activation);
 
+      let images = classifier.getClassExampleCount();
+
       const classes = ['A', 'B', 'C'];
       document.getElementById('console').innerText = `
         Prediction: ${classes[result.classIndex]}\n
         Probability: ${result.confidences[result.classIndex]}
       `;
 
+
+      if(images[0]>0){document.getElementById('counta').innerText = `
+        Images of type A: ${images[0]}
+      `;
     }
+    if (images[1]>0){
+      document.getElementById('countb').innerText = `
+        Images of type B: ${images[1]}
+      `;
+    }
+    if(images[2]>0){
+      document.getElementById('countc').innerText = `
+        Images of type C: ${images[2]}
+      `;
+    }
+  }
+
 
     await tf.nextFrame();
   }
