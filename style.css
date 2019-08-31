@@ -55,3 +55,6 @@ ol{
 li{
   margin-bottom: 10px;
 }
+#counta, #countb, #countc{
+  margin: 5px;
+}
